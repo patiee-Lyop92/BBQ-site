@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #404040;
+    text-align: center;
+}
+
+/*====Typography====*/
+h1 {
+    font-weight: 300;
+    margin: 2em;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0;
+
+}
+
+strong {
+    font-weight: 900;
+
+}
+
+.p-style {
+    color: #F18119;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/*====Top-cantainer====*/
+.top-container {
+    background-image: url(../images/redddd.png);
+    background-color: #404040;
+    background-size: cover;
+    background-position: center;
+    /*background-blend-mode: multiply;*/
+    color: white;
+    padding: 0 .25rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/*====second-container===*/
+.second-container {
+    
+    padding: 1em 2em;
+}
+
+/*using * to make all the content not stretch on big screen*/
+
+.top-container > * , 
+.second-container > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*===form===*/
+.form-styling {
+    width: 60%;
+    max-width: 300;
+}
+
+input, 
+.submit-btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    text-align: inherit;
+    font-family: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    transform: scale(1);
+
+}
+input:focus {
+    transition: 250ms;
+    transform: scale(1.1);
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transform: scale(1);
+    transition: 250ms;
+    background: linear-gradient(to left, #FF713B, #FFA51D)
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+    color: black;
+
+}
+
+/*====media====*/
+@media (min-width: 300px) {
+    body {
+        display: flex;
+        font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .top-container,
+    .second-container {
+       width: 50%;
+       min-height: 100vh;
+    }
+    .second-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
